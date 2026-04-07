@@ -1,0 +1,11 @@
+$ curl -s -X POST http://localhost:8000/compare -H "Content-Type: application/json" -d '{"run1": {"cloud": "azure", "os_vendor": "rhel", "os_version": "9.6", "instance": "Standard_D16ds_v6", "benchmark": "coremark_pro"}, "run2": {"cloud": "azure", "os_vendor": "rhel", "os_version": "9.6", "instance": "Standard_D32ds_v6", "benchmark": "coremark_pro"}, "detail_level": "medium"}' | jq
+
+{
+  "geomean_delta_pct": 40.89,
+  "status": "Improvement",
+  "matched_metrics": 26,
+  "analysis": "Status: Improvement +40.89%\n\nKey Metrics:\n  - multicore_score: 70284.43 vs 119823.49 (+70.48%) BETTER\n  - cjpeg-rose7-preset_multicore_iterations_per_sec: 2000.0 vs 2500.0 (+25.00%) BETTER\n  - core_multicore_iterations_per_sec: 23.6 vs 47.41 (+100.89%) BETTER\n\nSummary: Run2 shows a significant improvement compared to Run1. The multicore score and iterations per second for various subtests have increased substantially, indicating better performance on the Standard_D32ds_v6 instance compared to the Standard_D16ds_v6 instance.\n",
+  "run1_id": "coremark_pro_53f14a247704723c",
+  "run2_id": "coremark_pro_ea36fc288a42cee8",
+  "detail_level": "medium"
+}

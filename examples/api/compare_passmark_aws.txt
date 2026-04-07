@@ -1,0 +1,11 @@
+$ curl -s -X POST http://localhost:8000/compare -H "Content-Type: application/json" -d '{"run1": {"cloud": "aws", "os_vendor": "rhel", "os_version": "9.5", "instance": "m7i.4xlarge", "benchmark": "passmark"}, "run2": {"cloud": "aws", "os_vendor": "rhel", "os_version": "9.5", "instance": "m7i.8xlarge", "benchmark": "passmark"}, "detail_level": "medium"}' | jq
+
+{
+  "geomean_delta_pct": 42.0,
+  "status": "Improvement",
+  "matched_metrics": 26,
+  "analysis": "Status: Improvement +42.00%\n\nKey Metrics:\n  - CPU_COMPRESSION_mean: 285227.93 vs 480035.20 (+68.30%) BETTER\n  - CPU_INTEGER_MATH_mean: 80994.63 vs 136594.71 (+68.65%) BETTER\n  - CPU_FLOATINGPOINT_MATH_mean: 57464.63 vs 96850.51 (+68.54%) BETTER\n  - ME_LARGE_mean: 60008.40 vs 122851.10 (+104.72%) BETTER\n  - CPU_SINGLETHREAD_mean: 3047.60 vs 2850.90 (-6.45%) WORSE\n\nSummary: Run2 shows a significant overall improvement compared to Run1, with a geomean increase of 42.00%. Most CPU and memory-related metrics show substantial gains, likely due to the increased number of cores in the m7i.8xlarge instance. However, single-threaded performance decreased slightly.\n",
+  "run1_id": "passmark_04ff7f5b944b0e7b",
+  "run2_id": "passmark_fcfddd78a421e915",
+  "detail_level": "medium"
+}

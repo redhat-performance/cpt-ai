@@ -1,0 +1,11 @@
+$ curl -s -X POST http://localhost:8000/compare -H "Content-Type: application/json" -d '{"run1": {"cloud": "azure", "os_vendor": "rhel", "os_version": "9.6", "instance": "Standard_D96ds_v6", "benchmark": "passmark"},"run2": {"cloud": "azure", "os_vendor": "rhel", "os_version": "9.6", "instance": "Standard_D64ds_v6", "benchmark": "passmark"}, "detail_level": "medium"}' | jq
+
+{
+  "geomean_delta_pct": -16.37,
+  "status": "Regression",
+  "matched_metrics": 26,
+  "analysis": "Status: Regression -16.37%\n\nKey Metrics:\n  - CPU_COMPRESSION_mean: 1345954.18 vs 910202.74 (-32.37%) WORSE\n  - CPU_INTEGER_MATH_mean: 382090.86 vs 255130.08 (-33.23%) WORSE\n  - ME_LATENCY_mean: 124.75 vs 71.21 (-42.92%) WORSE\n  - ME_THREADED_mean: 187285.66 vs 289629.85 (+54.65%) BETTER\n  - ME_READ_L_mean: 7033.28 vs 10100.78 (+43.61%) BETTER\n\nSummary: Run2 shows a significant regression compared to Run1. CPU-bound tasks like compression and integer math are notably slower. Memory latency is also significantly worse. However, memory threaded performance and large reads improved significantly.\n\nSEVERITY: MAJOR\n",
+  "run1_id": "passmark_291f3fd4b4ba2899",
+  "run2_id": "passmark_896d88dd3cf334f0",
+  "detail_level": "medium"
+}

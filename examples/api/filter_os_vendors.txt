@@ -1,0 +1,10 @@
+$ curl -s -X POST http://localhost:8000/filters -H "Content-Type: application/json" -d '{"field": "os_vendor"}' | jq
+
+{
+  "values": [
+    {
+      "value": "rhel",
+      "count": 4248
+    }
+  ]
+}

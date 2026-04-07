@@ -1,0 +1,260 @@
+(ai-mcp-env) sbhavsar@sbhavsar-thinkpadp16vgen1:~/sub-cpt-ai$ python regression_analyzer.py 
+================================================================================
+Regression Analyzer (using OpenSearch MCP Server)
+================================================================================
+
+REGRESSION = RUN1 vs RUN2
+================================================================================
+
+Using model: gemini-2.0-flash
+
+Connecting to OpenSearch MCP Server...
+Connected successfully!
+
+================================================================================
+SELECT RUN 1 (Baseline)
+================================================================================
+
+  Step 1/5: Cloud Provider:
+    1. aws  (3,616 docs)
+    2. azure  (629 docs)
+  Select [1-2]: 1
+
+  Step 2/5: OS Vendor:
+    1. rhel  (3,616 docs)
+  Select [1-1]: 1
+
+  Step 3/5: OS Version:
+    1. RHEL 9.5  (3,616 docs)
+  Select [1-1]: 1
+
+  Step 4/5: Instance Type:
+    1. m5.24xlarge  (101 docs)
+    2. m5.4xlarge  (101 docs)
+    3. m5.xlarge  (101 docs)
+    4. m5a.24xlarge  (101 docs)
+    5. m5a.4xlarge  (101 docs)
+    6. m5a.xlarge  (101 docs)
+    7. m6a.24xlarge  (101 docs)
+    8. m6a.4xlarge  (101 docs)
+    9. m6a.xlarge  (101 docs)
+    10. m6g.8xlarge  (101 docs)
+    11. m6i.24xlarge  (101 docs)
+    12. m6i.4xlarge  (101 docs)
+    13. m6i.xlarge  (101 docs)
+    14. m7a.16xlarge  (101 docs)
+    15. m7a.24xlarge  (101 docs)
+    16. m7a.2xlarge  (101 docs)
+    17. m7a.48xlarge  (101 docs)
+    18. m7a.4xlarge  (101 docs)
+    19. m7a.8xlarge  (101 docs)
+    20. m7a.xlarge  (101 docs)
+    21. m7i.16xlarge  (101 docs)
+    22. m7i.24xlarge  (101 docs)
+    23. m7i.2xlarge  (101 docs)
+    24. m7i.48xlarge  (101 docs)
+    25. m7i.4xlarge  (101 docs)
+    26. m7i.8xlarge  (101 docs)
+    27. m7i.xlarge  (101 docs)
+    28. m6g.4xlarge  (100 docs)
+    29. m7g.16xlarge  (100 docs)
+    30. m6g.16xlarge  (99 docs)
+    31. m6g.2xlarge  (99 docs)
+    32. m7g.8xlarge  (99 docs)
+    33. m6g.xlarge  (98 docs)
+    34. m7g.2xlarge  (98 docs)
+    35. m7g.4xlarge  (98 docs)
+    36. m7g.xlarge  (98 docs)
+  Select [1-36]: 1
+
+  Step 5/5: Benchmark:
+    1. pyperf  (90 docs)
+    2. coremark_pro  (2 docs)
+    3. phoronix  (2 docs)
+    4. auto_hpl  (1 docs)
+    5. coremark  (1 docs)
+    6. passmark  (1 docs)
+    7. pig  (1 docs)
+    8. specjbb  (1 docs)
+    9. streams  (1 docs)
+    10. uperf  (1 docs)
+  Select [1-10]: 2
+
+================================================================================
+SELECT RUN 2 (Comparison)
+================================================================================
+
+  Step 1/5: Cloud Provider:
+    1. aws  (3,616 docs)
+    2. azure  (629 docs)
+  Select [1-2]: 1
+
+  Step 2/5: OS Vendor:
+    1. rhel  (3,616 docs)
+  Select [1-1]: 1
+
+  Step 3/5: OS Version:
+    1. RHEL 9.5  (3,616 docs)
+  Select [1-1]: 1
+
+  Step 4/5: Instance Type:
+    1. m5.24xlarge  (101 docs)
+    2. m5.4xlarge  (101 docs)
+    3. m5.xlarge  (101 docs)
+    4. m5a.24xlarge  (101 docs)
+    5. m5a.4xlarge  (101 docs)
+    6. m5a.xlarge  (101 docs)
+    7. m6a.24xlarge  (101 docs)
+    8. m6a.4xlarge  (101 docs)
+    9. m6a.xlarge  (101 docs)
+    10. m6g.8xlarge  (101 docs)
+    11. m6i.24xlarge  (101 docs)
+    12. m6i.4xlarge  (101 docs)
+    13. m6i.xlarge  (101 docs)
+    14. m7a.16xlarge  (101 docs)
+    15. m7a.24xlarge  (101 docs)
+    16. m7a.2xlarge  (101 docs)
+    17. m7a.48xlarge  (101 docs)
+    18. m7a.4xlarge  (101 docs)
+    19. m7a.8xlarge  (101 docs)
+    20. m7a.xlarge  (101 docs)
+    21. m7i.16xlarge  (101 docs)
+    22. m7i.24xlarge  (101 docs)
+    23. m7i.2xlarge  (101 docs)
+    24. m7i.48xlarge  (101 docs)
+    25. m7i.4xlarge  (101 docs)
+    26. m7i.8xlarge  (101 docs)
+    27. m7i.xlarge  (101 docs)
+    28. m6g.4xlarge  (100 docs)
+    29. m7g.16xlarge  (100 docs)
+    30. m6g.16xlarge  (99 docs)
+    31. m6g.2xlarge  (99 docs)
+    32. m7g.8xlarge  (99 docs)
+    33. m6g.xlarge  (98 docs)
+    34. m7g.2xlarge  (98 docs)
+    35. m7g.4xlarge  (98 docs)
+    36. m7g.xlarge  (98 docs)
+  Select [1-36]: 2
+
+  Step 5/5: Benchmark:
+    1. pyperf  (90 docs)
+    2. coremark_pro  (2 docs)
+    3. phoronix  (2 docs)
+    4. auto_hpl  (1 docs)
+    5. coremark  (1 docs)
+    6. passmark  (1 docs)
+    7. pig  (1 docs)
+    8. specjbb  (1 docs)
+    9. streams  (1 docs)
+    10. uperf  (1 docs)
+  Select [1-10]: 2
+
+Comparison saved to ~/.cache/regression_last_comparison.json for quick Q&A access.
+
+================================================================================
+COMPARISON SUMMARY
+================================================================================
+                                 RUN 1 (Baseline)               RUN 2 (Comparison)            
+  ------------------------------ ------------------------------ ------------------------------
+  Cloud:                         aws                            aws                           
+  OS:                            rhel 9.5                       rhel 9.5                      
+  Instance:                      m5.24xlarge                    m5.4xlarge                    
+  Benchmark:                     coremark_pro                   coremark_pro                  
+  Timestamp:                     2025-11-18T12:13:10Z           2025-11-18T12:13:04Z          
+  Doc ID:                        coremark_pro_59319bf42ddff83   coremark_pro_bb1d10e31753027  
+================================================================================
+
+Select Analysis Detail Level
+
+  1. Basic   (1-2 lines)
+  2. Medium  (5-10 lines)
+  3. Expert  (Comprehensive)
+
+Select [1-3]: 2
+
+================================================================================
+ANALYZING REGRESSION...
+================================================================================
+
+================================================================================
+COREMARK_PRO REGRESSION ANALYSIS RESULT (MEDIUM)
+================================================================================
+
+Status: Regression -45.88%
+
+Key Metrics:
+  - multicore_score: 130925.01 vs 47804.18 (-63.49%) WORSE
+  - cjpeg-rose7-preset_multicore_iterations_per_sec: 1555.56 vs 1250.0 (-19.64%) WORSE
+  - core_multicore_iterations_per_sec: 97.86 vs 16.48 (-83.16%) WORSE
+
+Summary: Performance regressed significantly in Run2 compared to Run1. The multicore scores and iterations per second metrics show substantial decreases across the board, likely due to the smaller instance size (m5.24xlarge vs m5.4xlarge).
+
+SEVERITY: CRITICAL
+
+
+================================================================================
+
+================================================================================
+INTERACTIVE Q&A MODE
+================================================================================
+
+You can now ask questions about the regression analysis.
+
+Type 'quit' or 'exit' to end the session.
+================================================================================
+
+Your question: how is teh Regression -45.88% calculated?
+
+Asking AI...
+
+--------------------------------------------------------------------------------
+AI Response:
+--------------------------------------------------------------------------------
+The regression of -45.88% was calculated using a geometric mean of the ratios between the metrics in Run 2 and Run 1. Here's a breakdown:
+
+1. **Calculate Ratios:** For each matched metric, a ratio is calculated by dividing the Run 2 value by the Run 1 value. For example, for `cjpeg-rose7-preset_multicore_iterations_per_sec`, the ratio is 1250.00 / 1555.56 = 0.803569.
+
+2. **Geometric Mean:** The geometric mean is calculated using the following formula:
+
+   `geomean = exp(sum(log(ratio_i)) / N)`
+
+   Where:
+   *   `ratio_i` is the ratio for the i-th metric.
+   *   `N` is the total number of matched metrics (in this case, 26).
+   *   `exp` is the exponential function.
+   *   `log` is the natural logarithm.
+
+3. **Delta Calculation:** The percentage change (delta) is calculated from the geometric mean using this formula:
+
+   `delta% = (geomean - 1) * 100`
+
+**Detailed Calculation:**
+
+Let's walk through a simplified example. Suppose we only had three metrics and their ratios were 0.8, 0.2, and 0.9.
+
+1.  Calculate the natural logarithm of each ratio:
+    *   log(0.8) = -0.2231
+    *   log(0.2) = -1.6094
+    *   log(0.9) = -0.1054
+
+2.  Sum the logarithms:
+    *   -0.2231 + (-1.6094) + (-0.1054) = -1.9379
+
+3.  Divide the sum by the number of metrics (3):
+    *   -1.9379 / 3 = -0.6460
+
+4.  Take the exponential of the result:
+    *   exp(-0.6460) = 0.5241
+
+5.  Calculate the percentage change:
+    *   (0.5241 - 1) * 100 = -47.59%
+
+**Applying to the provided data:**
+
+The calculation details show that the geometric mean of all 26 ratios is 0.541216. Therefore, the delta is:
+
+Delta = (0.541216 - 1) * 100 = -45.88%
+
+This means that, on average, the metrics in Run 2 are 45.88% lower than the corresponding metrics in Run 1.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

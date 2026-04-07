@@ -1,0 +1,210 @@
+(ai-mcp-env) sbhavsar@sbhavsar-thinkpadp16vgen1:~/sub-cpt-ai$ python regression_analyzer.py 
+================================================================================
+Regression Analyzer (using OpenSearch MCP Server)
+================================================================================
+
+REGRESSION = RUN1 vs RUN2
+================================================================================
+
+Using model: gemini-2.0-flash
+
+Connecting to OpenSearch MCP Server...
+Connected successfully!
+
+================================================================================
+SELECT RUN 1 (Baseline)
+================================================================================
+
+  Step 1/5: Cloud Provider:
+    1. aws  (3,616 docs)
+    2. azure  (629 docs)
+  Select [1-2]: 2
+
+  Step 2/5: OS Vendor:
+    1. rhel  (629 docs)
+  Select [1-1]: 1
+
+  Step 3/5: OS Version:
+    1. RHEL 9.6  (587 docs)
+    2. RHEL 10.0  (42 docs)
+  Select [1-2]: 1
+
+  Step 4/5: Instance Type:
+    1. Standard_D96ds_v6  (98 docs)
+    2. Standard_D128ds_v6  (97 docs)
+    3. Standard_D16ds_v6  (97 docs)
+    4. Standard_D32ds_v6  (97 docs)
+    5. Standard_D64ds_v6  (97 docs)
+    6. Standard_D8ds_v6  (97 docs)
+    7. Standard_D4ds_v6  (4 docs)
+  Select [1-7]: 1
+
+  Step 5/5: Benchmark:
+    1. pyperf  (90 docs)
+    2. auto_hpl  (1 docs)
+    3. coremark  (1 docs)
+    4. coremark_pro  (1 docs)
+    5. passmark  (1 docs)
+    6. phoronix  (1 docs)
+    7. specjbb  (1 docs)
+    8. streams  (1 docs)
+    9. uperf  (1 docs)
+  Select [1-9]: 1
+
+================================================================================
+SELECT RUN 2 (Comparison)
+================================================================================
+
+  Step 1/5: Cloud Provider:
+    1. aws  (3,616 docs)
+    2. azure  (629 docs)
+  Select [1-2]: 2
+1
+
+  Step 2/5: OS Vendor:
+    1. rhel  (629 docs)
+  Select [1-1]: 
+  Step 3/5: OS Version:
+    1. RHEL 9.6  (587 docs)
+    2. RHEL 10.0  (42 docs)
+  Select [1-2]: 1
+
+  Step 4/5: Instance Type:
+    1. Standard_D96ds_v6  (98 docs)
+    2. Standard_D128ds_v6  (97 docs)
+    3. Standard_D16ds_v6  (97 docs)
+    4. Standard_D32ds_v6  (97 docs)
+    5. Standard_D64ds_v6  (97 docs)
+    6. Standard_D8ds_v6  (97 docs)
+    7. Standard_D4ds_v6  (4 docs)
+  Select [1-7]: 2
+
+  Step 5/5: Benchmark:
+    1. pyperf  (90 docs)
+    2. auto_hpl  (1 docs)
+    3. coremark  (1 docs)
+    4. coremark_pro  (1 docs)
+    5. passmark  (1 docs)
+    6. phoronix  (1 docs)
+    7. specjbb  (1 docs)
+    8. streams  (1 docs)
+  Select [1-8]: 1
+
+Comparison saved to ~/.cache/regression_last_comparison.json for quick Q&A access.
+
+================================================================================
+COMPARISON SUMMARY
+================================================================================
+                                 RUN 1 (Baseline)               RUN 2 (Comparison)            
+  ------------------------------ ------------------------------ ------------------------------
+  Cloud:                         azure                          azure                         
+  OS:                            rhel 9.6                       rhel 9.6                      
+  Instance:                      Standard_D96ds_v6              Standard_D128ds_v6            
+  Benchmark:                     pyperf                         pyperf                        
+  Timestamp:                     2025-09-18T22:19:55Z           2025-09-19T01:43:53Z          
+  Doc ID:                        pyperf_2to3_ff9a81eacc6abd85   pyperf_2to3_0d112464d26cd921  
+================================================================================
+
+Select Analysis Detail Level
+
+  1. Basic   (1-2 lines)
+  2. Medium  (5-10 lines)
+  3. Expert  (Comprehensive)
+
+Select [1-3]: 2
+
+================================================================================
+ANALYZING REGRESSION...
+================================================================================
+
+================================================================================
+PYPERF REGRESSION ANALYSIS RESULT (MEDIUM)
+================================================================================
+
+Status: No regression -3.22%
+
+Key Metrics:
+  - max_seconds: 0.2677 vs 0.2642 (-1.31%) BETTER
+  - mean_seconds: 0.2603 vs 0.2579 (-0.91%) BETTER
+  - median_seconds: 0.2598 vs 0.2564 (-1.31%) BETTER
+  - stdev_seconds: 0.0036 vs 0.0032 (-12.09%) BETTER
+
+Summary: Run2 shows a slight improvement compared to Run1, with the standard deviation showing the most significant gain. All key metrics are slightly better in Run2.
+
+
+================================================================================
+
+================================================================================
+INTERACTIVE Q&A MODE
+================================================================================
+
+You can now ask questions about the regression analysis.
+
+Type 'quit' or 'exit' to end the session.
+================================================================================
+
+Your question: calculate the geomean and create a table of comparision and give final delta in run1 run2 with percentage
+
+Asking AI...
+
+--------------------------------------------------------------------------------
+AI Response:
+--------------------------------------------------------------------------------
+Here's a breakdown of the performance comparison between Run 1 and Run 2, including the geometric mean calculation and a table summarizing the changes.
+
+**Performance Summary**
+
+Overall, Run 2 shows a slight improvement compared to Run 1. The geometric mean of the ratios of the matched metrics indicates a **-3.22%** change, suggesting a performance gain in Run 2.
+
+**Geometric Mean Calculation Explained**
+
+The geometric mean is used to summarize the central tendency of ratios. Here's how it was calculated:
+
+1.  **Calculate Ratios:** For each matched metric (max\_seconds, mean\_seconds, median\_seconds, min\_seconds, stdev\_seconds), the ratio of `Run2 / Run1` is calculated.
+
+2.  **Log Transformation:** The natural logarithm (ln) of each ratio is taken. This is a crucial step because it converts multiplicative relationships into additive ones, which is necessary for using the arithmetic mean in the next step.
+
+3.  **Arithmetic Mean of Log Ratios:** The arithmetic mean of all the log ratios is calculated.
+
+4.  **Exponential Transformation:** The exponential function (exp) is applied to the arithmetic mean of the log ratios. This converts the value back from the logarithmic scale to the original scale, giving the geometric mean.
+
+5.  **Delta Calculation:** Finally, the percentage change (delta) is calculated as `(geometric mean - 1) * 100`.
+
+**Detailed Calculation:**
+
+Let's walk through the calculation using the provided data:
+
+| Metric          | Run 1      | Run 2      | Ratio (Run2/Run1) | ln(Ratio)  |
+| --------------- | ---------- | ---------- | ----------------- | ---------- |
+| max\_seconds    | 0.267728   | 0.264225   | 0.986918          | -0.013173  |
+| mean\_seconds   | 0.260289   | 0.257913   | 0.990870          | -0.009174  |
+| median\_seconds | 0.259799   | 0.256400   | 0.986917          | -0.013174  |
+| min\_seconds    | 0.253498   | 0.253713   | 1.000847          | 0.000847   |
+| stdev\_seconds  | 0.003638   | 0.003198   | 0.879137          | -0.128866  |
+
+1.  **Sum of ln(Ratios):** -0.013173 + (-0.009174) + (-0.013174) + 0.000847 + (-0.128866) = -0.16354
+
+2.  **Arithmetic Mean of ln(Ratios):** -0.16354 / 5 = -0.032708
+
+3.  **Geometric Mean:** exp(-0.032708) = 0.967833
+
+4.  **Delta (%):** (0.967833 - 1) \* 100 = -3.22%
+
+**Comparison Table**
+
+| Metric          | Run 1      | Run 2      | Delta (%) |
+| --------------- | ---------- | ---------- | --------- |
+| max\_seconds    | 0.267728   | 0.264225   | -1.31%    |
+| mean\_seconds   | 0.260289   | 0.257913   | -0.91%    |
+| median\_seconds | 0.259799   | 0.256400   | -1.31%    |
+| min\_seconds    | 0.253498   | 0.253713   | +0.08%    |
+| stdev\_seconds  | 0.003638   | 0.003198   | -12.09%   |
+| **Geometric Mean** |          |            | **-3.22%** |
+
+**Key Observations**
+
+*   The standard deviation (`stdev_seconds`) shows the most significant improvement (-12.09%), indicating more consistent performance in Run 2.
+*   The `min_seconds` metric shows a slight regression (+0.08%), but the impact on the overall performance is minimal.
+*   The other metrics (`max_seconds`, `mean_seconds`, `median_seconds`) show small improvements, contributing to the overall negative delta.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
