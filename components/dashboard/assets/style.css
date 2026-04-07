@@ -1,0 +1,232 @@
+/* Performance Engineering Dashboard Styles */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+h1 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-weight: 600;
+    color: #212529;
+}
+
+h4 {
+    font-weight: 600;
+    color: #495057;
+}
+
+h5 {
+    font-weight: 600;
+    color: #6c757d;
+}
+
+/* Card Styles */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: none;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e9ecef;
+    padding: 1rem 1.25rem;
+}
+
+.card-header h4 {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #212529;
+}
+
+.card-body h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.card-body h5 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Filter Panel */
+.bg-light {
+    background-color: #ffffff !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+    color: #495057;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Dropdowns */
+.Select-control {
+    border-radius: 0.25rem;
+}
+
+/* Buttons */
+.btn {
+    font-weight: 500;
+    border-radius: 0.25rem;
+}
+
+/* Summary Cards */
+.text-primary {
+    color: #007bff !important;
+}
+
+.text-info {
+    color: #17a2b8 !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+/* Plotly Charts */
+.js-plotly-plot {
+    border-radius: 0.25rem;
+}
+
+/* Alert/Summary Styles */
+.alert {
+    border-radius: 0.25rem;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    border-left-color: #28a745;
+    background-color: #d4edda;
+}
+
+.alert-warning {
+    border-left-color: #ffc107;
+    background-color: #fff3cd;
+}
+
+.alert-danger {
+    border-left-color: #dc3545;
+    background-color: #f8d7da;
+}
+
+.alert-info {
+    border-left-color: #17a2b8;
+    background-color: #d1ecf1;
+}
+
+.alert h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Question Section Spacing */
+.card.mb-4 {
+    margin-bottom: 2rem !important;
+}
+
+/* Date Picker Styles */
+.DateInput_input {
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+/* Advanced Filter Collapse */
+#collapse-filters {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styles for Question Cards */
+.btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 123, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+/* Investigation View Styles */
+.btn-link {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Loading Indicator */
+._dash-loading {
+    margin: 2rem auto;
+}
+
+/* Heatmap Cell Hover Effect */
+.js-plotly-plot .heatmaplayer .hm {
+    cursor: pointer;
+}
+
+/* Markdown in Alerts */
+.alert p {
+    margin-bottom: 0.5rem;
+}
+
+.alert p:last-child {
+    margin-bottom: 0;
+}
+
+/* Dropdown Styles */
+.Select-menu-outer {
+    z-index: 1000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .card-header h4 {
+        font-size: 1.1rem;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    .btn-outline-primary {
+        margin-bottom: 0.5rem;
+    }
+}
+

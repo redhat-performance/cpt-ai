@@ -1,0 +1,13 @@
+# Dash Framework
+dash>=2.14.2,<4.0.0
+dash-ag-grid>=2.4.0
+dash-bootstrap-components>=1.5.0
+
+# Data Processing
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Testing
+pytest>=7.4.3
+pytest-cov>=4.1.0
+
