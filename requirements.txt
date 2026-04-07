@@ -1,0 +1,12 @@
+opensearch-mcp-server-py
+mcp[cli]>=1.9.4
+langchain-mcp-adapters
+langchain
+langchain-core
+langchain-community
+langchain-openai
+fastapi
+uvicorn
+httpx
+python-dotenv
+pydantic
