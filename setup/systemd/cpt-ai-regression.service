@@ -1,0 +1,16 @@
+[Unit]
+Description=CPT AI - Regression Analyzer Standalone Dashboard
+After=network.target cpt-ai-mcp.service
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__REPO_DIR__/components/dashboard
+ExecStart=__VENV_DIR__/bin/python3 ra_app.py
+Restart=on-failure
+RestartSec=5
+Environment=PORT=8060
+EnvironmentFile=-__REPO_DIR__/.env
+
+[Install]
+WantedBy=multi-user.target
