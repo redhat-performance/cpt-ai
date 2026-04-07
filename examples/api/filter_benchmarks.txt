@@ -1,0 +1,42 @@
+$ curl -s -X POST http://localhost:8000/filters -H "Content-Type: application/json" -d '{"field": "benchmark", "filters": {"cloud": "azure", "os_vendor": "rhel", "os_version": "9.6", "instance": "Standard_D96ds_v6"}}' | jq
+
+{
+  "values": [
+    {
+      "value": "pyperf",
+      "count": 90
+    },
+    {
+      "value": "auto_hpl",
+      "count": 1
+    },
+    {
+      "value": "coremark",
+      "count": 1
+    },
+    {
+      "value": "coremark_pro",
+      "count": 1
+    },
+    {
+      "value": "passmark",
+      "count": 1
+    },
+    {
+      "value": "phoronix",
+      "count": 1
+    },
+    {
+      "value": "specjbb",
+      "count": 1
+    },
+    {
+      "value": "streams",
+      "count": 1
+    },
+    {
+      "value": "uperf",
+      "count": 1
+    }
+  ]
+}

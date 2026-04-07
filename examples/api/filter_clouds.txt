@@ -1,0 +1,14 @@
+$ curl -s -X POST http://localhost:8000/filters -H "Content-Type: application/json" -d '{"field": "cloud"}' | jq
+
+{
+  "values": [
+    {
+      "value": "aws",
+      "count": 3619
+    },
+    {
+      "value": "azure",
+      "count": 629
+    }
+  ]
+}

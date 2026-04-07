@@ -1,0 +1,11 @@
+$ curl -s -X POST http://localhost:8000/compare -H "Content-Type: application/json" -d '{"run1": {"cloud": "azure", "os_vendor": "rhel", "os_version": "9.6", "instance": "Standard_D16ds_v6", "benchmark": "streams"}, "run2": {"cloud": "azure", "os_vendor": "rhel", "os_version": "9.6", "instance": "Standard_D32ds_v6", "benchmark": "streams"}, "detail_level": "medium"}' | jq
+
+{
+  "geomean_delta_pct": 53.81,
+  "status": "Improvement",
+  "matched_metrics": 16,
+  "analysis": "Status: Improvement +53.81%\n\nKey Metrics:\n  - add_1064960k_mb_per_sec: 108201.0 vs 179969.0 (+66.33%) BETTER\n  - copy_1064960k_mb_per_sec: 163839.0 vs 235431.0 (+43.70%) BETTER\n  - scale_1064960k_mb_per_sec: 97154.0 vs 154202.0 (+58.72%) BETTER\n\nSummary: Run2 shows a significant improvement in performance compared to Run1. This is likely due to the instance size increase from Standard_D16ds_v6 to Standard_D32ds_v6, which provides more resources for the benchmark. All subtests show improvement, with the geomean indicating a +53.81% increase in performance.\n",
+  "run1_id": "streams_37d07fed2b56ea11",
+  "run2_id": "streams_ff5492364ac080f2",
+  "detail_level": "medium"
+}

@@ -1,0 +1,5 @@
+$ curl -s -X POST http://localhost:8000/ask -H "Content-Type: application/json" -d '{"run1": {"cloud": "azure", "os_vendor": "rhel", "os_version": "9.6", "instance": "Standard_D16ds_v6", "benchmark": "streams"}, "run2": {"cloud": "azure", "os_vendor": "rhel", "os_version": "9.6", "instance": "Standard_D32ds_v6", "benchmark": "streams"}, "detail_level": "medium", "question": "Are there stddev values available and how much variance is there across iterations?"}' | jq
+
+{
+  "answer": "I am sorry, but I do not have access to stddev values, nor the variance across iterations. The provided data only includes the mean values for each metric in both runs.\n"
+}
