@@ -1,0 +1,550 @@
+/* ============================================
+   DARK MODE THEME
+   Performance Engineering Dashboard
+   ============================================ */
+
+/* Dark Mode Styles - Applied when body has 'dark-mode' class */
+
+body.dark-mode {
+  background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+  color: #f1f5f9;
+}
+
+/* Dark Mode CSS Variables Override */
+body.dark-mode {
+  --primary-blue: #3b82f6;
+  --primary-light: #60a5fa;
+  --success-green: #34d399;
+  --warning-amber: #fbbf24;
+  --error-red: #f87171;
+  --info-cyan: #22d3ee;
+  
+  /* Dark Neutrals */
+  --gray-900: #f1f5f9;
+  --gray-600: #cbd5e1;
+  --gray-300: #475569;
+  --gray-100: #334155;
+  --gray-50: #1e293b;
+  
+  /* Dark Backgrounds */
+  --bg-primary: #1e293b;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #334155;
+  
+  /* Dark Borders */
+  --border-color: #334155;
+  --border-dark: #475569;
+}
+
+/* Cards in Dark Mode */
+body.dark-mode .card {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .card:hover {
+  background-color: #334155 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .card-header {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+  border-bottom: 2px solid #3b82f6 !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .card-body {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+/* Headers in Dark Mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode h1 {
+  color: #60a5fa !important;
+}
+
+/* Text Colors in Dark Mode */
+body.dark-mode .text-primary {
+  color: #60a5fa !important;
+}
+
+body.dark-mode .text-muted {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .text-secondary {
+  color: #cbd5e1 !important;
+}
+
+/* Buttons in Dark Mode */
+body.dark-mode .btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%) !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .btn-secondary {
+  background: linear-gradient(135deg, #475569 0%, #64748b 100%) !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .btn-outline-primary {
+  border-color: #3b82f6 !important;
+  color: #60a5fa !important;
+  background: transparent !important;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .btn-link {
+  color: #60a5fa !important;
+}
+
+body.dark-mode .btn-link:hover {
+  color: #93c5fd !important;
+}
+
+/* Alerts in Dark Mode */
+body.dark-mode .alert-success {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 100%) !important;
+  border-left-color: #34d399 !important;
+  color: #d1fae5 !important;
+}
+
+body.dark-mode .alert-warning {
+  background: linear-gradient(135deg, #1e3a5f 0%, #1e4976 100%) !important;
+  border-left-color: #fbbf24 !important;
+  color: #fef3c7 !important;
+}
+
+body.dark-mode .alert-danger {
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%) !important;
+  border-left-color: #f87171 !important;
+  color: #fee2e2 !important;
+}
+
+body.dark-mode .alert-info {
+  background: linear-gradient(135deg, #164e63 0%, #155e75 100%) !important;
+  border-left-color: #22d3ee !important;
+  color: #cffafe !important;
+}
+
+/* Badges in Dark Mode */
+body.dark-mode .badge {
+  background-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .badge-primary {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .badge-secondary {
+  background-color: #475569 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Tables in Dark Mode */
+body.dark-mode table {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode thead th {
+  background: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode tbody tr {
+  background-color: #1e293b !important;
+}
+
+body.dark-mode tbody tr:hover {
+  background-color: #334155 !important;
+}
+
+body.dark-mode tbody td {
+  border-bottom: 1px solid #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Forms and Inputs in Dark Mode */
+body.dark-mode .Select-control,
+body.dark-mode .DateInput_input,
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background-color: #0f172a !important;
+  border-color: #475569 !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .Select-control:hover,
+body.dark-mode .DateInput_input:hover {
+  border-color: #3b82f6 !important;
+}
+
+body.dark-mode .Select-menu-outer {
+  background-color: #1e293b !important;
+  border-color: #475569 !important;
+}
+
+body.dark-mode .Select-option {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .Select-option:hover,
+body.dark-mode .Select-option.is-focused {
+  background-color: #334155 !important;
+}
+
+body.dark-mode .Select-value-label {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .Select-value {
+  background-color: #334155 !important;
+  border-color: #475569 !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .Select-input input {
+  background-color: transparent !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .Select-placeholder {
+  color: #64748b !important;
+}
+
+body.dark-mode .Select-clear-zone,
+body.dark-mode .Select-arrow-zone {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .Select--multi .Select-value {
+  background-color: #3b82f6 !important;
+  border-color: #60a5fa !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .Select--multi .Select-value-icon {
+  border-right-color: #60a5fa !important;
+}
+
+body.dark-mode .Select--multi .Select-value-icon:hover {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* Labels in Dark Mode */
+body.dark-mode label {
+  color: #cbd5e1 !important;
+}
+
+/* HR in Dark Mode */
+body.dark-mode hr {
+  border-top-color: #334155 !important;
+}
+
+/* Links in Dark Mode */
+body.dark-mode a {
+  color: #60a5fa !important;
+}
+
+body.dark-mode a:hover {
+  color: #93c5fd !important;
+}
+
+/* Plotly Charts in Dark Mode */
+body.dark-mode .js-plotly-plot,
+body.dark-mode .plotly {
+  background-color: #1e293b !important;
+}
+
+body.dark-mode .js-plotly-plot .bg,
+body.dark-mode .js-plotly-plot .gridlayer,
+body.dark-mode .js-plotly-plot .zerolinelayer {
+  fill: #1e293b !important;
+}
+
+body.dark-mode .js-plotly-plot text {
+  fill: #cbd5e1 !important;
+}
+
+body.dark-mode .js-plotly-plot .xtick text,
+body.dark-mode .js-plotly-plot .ytick text {
+  fill: #94a3b8 !important;
+}
+
+/* Plotly legend and other elements */
+body.dark-mode .js-plotly-plot .legend,
+body.dark-mode .js-plotly-plot .legend .bg {
+  fill: #1e293b !important;
+}
+
+body.dark-mode .js-plotly-plot .modebar {
+  background-color: transparent !important;
+}
+
+body.dark-mode .js-plotly-plot .modebar-btn path {
+  fill: #94a3b8 !important;
+}
+
+body.dark-mode .js-plotly-plot .modebar-btn:hover path {
+  fill: #f1f5f9 !important;
+}
+
+/* Collapse Sections in Dark Mode */
+body.dark-mode #collapse-filters .card {
+  border-color: #334155 !important;
+  background-color: #0f172a !important;
+}
+
+body.dark-mode #collapse-filters .card-body {
+  background-color: #0f172a !important;
+}
+
+/* Loading Spinner in Dark Mode */
+body.dark-mode ._dash-loading::after {
+  border-color: #60a5fa transparent transparent !important;
+}
+
+/* Checklist in Dark Mode */
+body.dark-mode input[type="checkbox"] {
+  background-color: #334155 !important;
+  border-color: #475569 !important;
+}
+
+body.dark-mode input[type="checkbox"]:checked {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Date Picker in Dark Mode */
+body.dark-mode .DateRangePickerInput {
+  background-color: #0f172a !important;
+  border-color: #475569 !important;
+}
+
+body.dark-mode .DateInput {
+  background-color: #0f172a !important;
+}
+
+body.dark-mode .CalendarMonth_caption {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .DayPicker {
+  background-color: #1e293b !important;
+}
+
+body.dark-mode .CalendarDay {
+  background-color: #1e293b !important;
+  color: #cbd5e1 !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode .CalendarDay:hover {
+  background-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .CalendarDay__selected {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .CalendarDay__selected:hover {
+  background-color: #60a5fa !important;
+}
+
+/* Scrollbar in Dark Mode */
+body.dark-mode ::-webkit-scrollbar {
+  width: 12px;
+  background-color: #0f172a;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 6px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background-color: #64748b;
+}
+
+/* Container in Dark Mode */
+body.dark-mode .container-fluid {
+  background: transparent !important;
+}
+
+/* Focus States in Dark Mode */
+body.dark-mode *:focus {
+  outline-color: #60a5fa !important;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #cbd5e1;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+#dark-mode-toggle::before {
+  content: '☀️';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #f1f5f9;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+body.dark-mode #dark-mode-toggle {
+  background-color: #475569;
+}
+
+body.dark-mode #dark-mode-toggle::before {
+  content: '🌙';
+  transform: translateX(30px);
+  background-color: #1e293b;
+}
+
+#dark-mode-toggle:hover {
+  opacity: 0.9;
+}
+
+/* Section-Specific Border Colors in Dark Mode */
+body.dark-mode .card.mb-4:nth-of-type(2) {
+  border-left-color: #3b82f6 !important;
+}
+
+body.dark-mode .card.mb-4:nth-of-type(3) {
+  border-left-color: #22d3ee !important;
+}
+
+body.dark-mode .card.mb-4:nth-of-type(4) {
+  border-left-color: #34d399 !important;
+}
+
+/* Small Text in Dark Mode */
+body.dark-mode small,
+body.dark-mode .small {
+  color: #94a3b8 !important;
+}
+
+/* Override any inline white backgrounds */
+body.dark-mode [style*="background: linear-gradient(135deg, #ffffff"],
+body.dark-mode [style*="background:linear-gradient(135deg, #ffffff"],
+body.dark-mode [style*="background-color: #ffffff"],
+body.dark-mode [style*="backgroundColor: #ffffff"],
+body.dark-mode [style*="background: #ffffff"],
+body.dark-mode [style*="background: white"],
+body.dark-mode [style*="background-color: white"],
+body.dark-mode [style*="background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%)"] {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+}
+
+/* Dashboard header card - override inline styles */
+body.dark-mode .card > .card-body[style*="background"] {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+body.dark-mode #dashboard-header,
+body.dark-mode #dashboard-header .card-body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+body.dark-mode #dashboard-header hr {
+  border-top-color: #475569 !important;
+}
+
+/* Catch-all for Bootstrap and common white backgrounds */
+body.dark-mode .bg-white,
+body.dark-mode .bg-light {
+  background-color: #1e293b !important;
+}
+
+body.dark-mode .modal-content,
+body.dark-mode .dropdown-menu,
+body.dark-mode .popover,
+body.dark-mode .tooltip-inner {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+/* Ensure all divs with white backgrounds are dark */
+body.dark-mode div[style*="white"],
+body.dark-mode div[style*="#fff"] {
+  background-color: #1e293b !important;
+}
+
+/* Print Styles - Force Light Mode */
+@media print {
+  body.dark-mode {
+    background: white !important;
+    color: black !important;
+  }
+  
+  body.dark-mode .card,
+  body.dark-mode .card-header,
+  body.dark-mode .card-body {
+    background: white !important;
+    color: black !important;
+    border-color: #e5e7eb !important;
+  }
+  
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4 {
+    color: black !important;
+  }
+  
+  #dark-mode-toggle {
+    display: none !important;
+  }
+}
+
+/* Smooth Transition Between Modes */
+body,
+.card,
+.card-header,
+.card-body,
+.btn,
+.alert,
+table,
+input,
+select,
+textarea {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+

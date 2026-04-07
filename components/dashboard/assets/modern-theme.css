@@ -1,0 +1,450 @@
+/* ============================================
+   MODERN DASHBOARD THEME
+   Performance Engineering Dashboard
+   ============================================ */
+
+/* CSS Variables for Easy Theming */
+:root {
+  /* Modern Color Palette */
+  --primary-blue: #1e3a8a;
+  --primary-light: #3b82f6;
+  --success-green: #10b981;
+  --warning-amber: #f59e0b;
+  --error-red: #ef4444;
+  --info-cyan: #06b6d4;
+  
+  /* Neutrals */
+  --gray-900: #1f2937;
+  --gray-600: #6b7280;
+  --gray-300: #d1d5db;
+  --gray-100: #f3f4f6;
+  --gray-50: #f9fafb;
+  
+  /* Spacing */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.12);
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  
+  /* Transitions */
+  --transition: all 0.2s ease-in-out;
+}
+
+/* Global Improvements */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+  background: linear-gradient(to bottom, #f9fafb 0%, #ffffff 100%);
+  color: var(--gray-900);
+  line-height: 1.6;
+}
+
+/* Enhanced Cards */
+.card {
+  border: none !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: var(--transition) !important;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%) !important;
+  border-bottom: 2px solid var(--primary-light) !important;
+  padding: var(--space-lg) !important;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: var(--space-lg) !important;
+}
+
+/* Section Cards - Color-Coded Borders */
+.card.mb-4:nth-of-type(2) {
+  border-left: 4px solid var(--primary-blue) !important;
+}
+
+.card.mb-4:nth-of-type(3) {
+  border-left: 4px solid var(--info-cyan) !important;
+}
+
+.card.mb-4:nth-of-type(4) {
+  border-left: 4px solid var(--success-green) !important;
+}
+
+/* Headers with Better Typography */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.02em;
+}
+
+h3, h4 {
+  font-weight: 600;
+  color: var(--gray-900);
+  letter-spacing: -0.01em;
+}
+
+h5 {
+  font-weight: 600;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+/* Better Alerts */
+.alert {
+  border: none !important;
+  border-radius: var(--radius-md) !important;
+  border-left: 4px solid !important;
+  padding: var(--space-lg) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%) !important;
+  border-left-color: var(--success-green) !important;
+  color: #065f46;
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+  border-left-color: var(--warning-amber) !important;
+  color: #78350f;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%) !important;
+  border-left-color: var(--error-red) !important;
+  color: #7f1d1d;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, #cffafe 0%, #a5f3fc 100%) !important;
+  border-left-color: var(--info-cyan) !important;
+  color: #164e63;
+}
+
+/* Modern Buttons */
+.btn {
+  border-radius: var(--radius-md) !important;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem !important;
+  transition: var(--transition) !important;
+  border: none !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-light) 100%) !important;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--gray-600) 0%, var(--gray-900) 100%) !important;
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary-light) !important;
+  color: var(--primary-blue) !important;
+  background: transparent !important;
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary-light) !important;
+  color: white !important;
+}
+
+/* Enhanced Collapse Sections */
+.card-header button[id^="btn-toggle"] {
+  font-weight: 600;
+  color: var(--gray-900);
+  text-decoration: none !important;
+  transition: var(--transition);
+}
+
+.card-header button[id^="btn-toggle"]:hover {
+  color: var(--primary-light);
+  background-color: var(--gray-50);
+}
+
+/* Animated Chevron */
+.card-header button i {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* Better Tables */
+table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+thead th {
+  background: var(--primary-blue) !important;
+  color: white !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  padding: var(--space-md) !important;
+}
+
+tbody tr {
+  transition: var(--transition);
+}
+
+tbody tr:hover {
+  background-color: var(--gray-50);
+}
+
+tbody td {
+  padding: var(--space-md) !important;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+/* Dropdown Improvements */
+.Select-control,
+.DateInput_input {
+  border: 2px solid var(--gray-300) !important;
+  border-radius: var(--radius-md) !important;
+  transition: var(--transition) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.Select-control:hover,
+.DateInput_input:hover {
+  border-color: var(--primary-light) !important;
+}
+
+.Select-control:focus,
+.DateInput_input:focus {
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Loading Spinner */
+._dash-loading {
+  opacity: 0.5;
+}
+
+._dash-loading::after {
+  border-color: var(--primary-light) transparent transparent !important;
+}
+
+/* Improved Text Colors */
+.text-primary {
+  color: var(--primary-blue) !important;
+}
+
+.text-success {
+  color: var(--success-green) !important;
+}
+
+.text-warning {
+  color: var(--warning-amber) !important;
+}
+
+.text-danger {
+  color: var(--error-red) !important;
+}
+
+.text-muted {
+  color: var(--gray-600) !important;
+}
+
+/* Status Badges */
+.badge {
+  padding: 0.35rem 0.75rem !important;
+  font-weight: 600;
+  border-radius: var(--radius-md) !important;
+  letter-spacing: 0.02em;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.alert,
+.collapse {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Focus States for Accessibility */
+*:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .card {
+    border-radius: var(--radius-md) !important;
+  }
+  
+  .card-body {
+    padding: var(--space-md) !important;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: var(--space-sm);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .card {
+    box-shadow: none !important;
+    border: 1px solid var(--gray-300) !important;
+  }
+  
+  .btn,
+  .collapse-header {
+    display: none !important;
+  }
+}
+
+/* Enhanced Plotly Chart Containers */
+.js-plotly-plot {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Better Spacing for Main Container */
+.container-fluid {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+
+/* Improved Form Labels */
+label {
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Better HR styling */
+hr {
+  border: none;
+  border-top: 2px solid var(--gray-100);
+  margin: var(--space-lg) 0;
+}
+
+/* Enhanced Summary Cards */
+.alert h5 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.alert p {
+  margin-bottom: 0.5rem;
+}
+
+.alert p:last-child {
+  margin-bottom: 0;
+}
+
+/* Collapsible Section Enhancements */
+#collapse-filters .card {
+  border: 2px solid var(--gray-100);
+}
+
+#collapse-filters .card-body {
+  background-color: var(--gray-50);
+}
+
+/* Better Link Styling */
+a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+/* Status Icons - Give them breathing room */
+.alert h5 > span:first-child,
+.alert h4 > span:first-child {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Better Small Text */
+small,
+.small {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+/* Checklist Improvements */
+input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+/* Date Picker Styling */
+.DateRangePickerInput {
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.DateInput {
+  border-radius: var(--radius-md) !important;
+}
+

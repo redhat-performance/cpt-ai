@@ -1,0 +1,119 @@
+/* Regression Analyzer - Chat Styling */
+
+.ra-chat-container {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+}
+
+.dark-mode .ra-chat-container {
+    background: #1e1e2e;
+    border-color: #444;
+}
+
+/* Chat message bubbles */
+.ra-chat-message {
+    margin-bottom: 0.75rem;
+    display: flex;
+}
+
+.ra-chat-message.user {
+    justify-content: flex-end;
+}
+
+.ra-chat-message.assistant {
+    justify-content: flex-start;
+}
+
+.ra-chat-bubble {
+    max-width: 80%;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    word-wrap: break-word;
+}
+
+.ra-chat-bubble.user {
+    background: #0d6efd;
+    color: #fff;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.ra-chat-bubble.assistant {
+    background: #e9ecef;
+    color: #212529;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.dark-mode .ra-chat-bubble.assistant {
+    background: #2d2d3f;
+    color: #e0e0e0;
+}
+
+/* Markdown inside chat bubbles */
+.ra-chat-bubble.assistant p {
+    margin-bottom: 0.25rem;
+}
+
+.ra-chat-bubble.assistant pre {
+    background: #d4d4d4;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    overflow-x: auto;
+}
+
+.dark-mode .ra-chat-bubble.assistant pre {
+    background: #1a1a2e;
+}
+
+/* Geomean badge styling */
+.ra-geomean-badge {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.ra-geomean-badge.regression {
+    background: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+}
+
+.ra-geomean-badge.improvement {
+    background: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+.ra-geomean-badge.neutral {
+    background: #cff4fc;
+    color: #055160;
+    border: 1px solid #b6effb;
+}
+
+.dark-mode .ra-geomean-badge.regression {
+    background: #5c1a1a;
+    color: #f8d7da;
+}
+
+.dark-mode .ra-geomean-badge.improvement {
+    background: #0f3d1e;
+    color: #d1e7dd;
+}
+
+.dark-mode .ra-geomean-badge.neutral {
+    background: #0a3040;
+    color: #cff4fc;
+}
+
+/* Loading state for chat */
+.ra-chat-loading {
+    text-align: center;
+    padding: 1rem;
+    color: #6c757d;
+    font-style: italic;
+}
